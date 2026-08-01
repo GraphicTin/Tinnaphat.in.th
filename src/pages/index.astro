@@ -1,16 +1,10 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import InteractiveWidget from '../components/InteractiveWidget.jsx';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>My Astro + React Site</title>
-  </head>
-  <body>
-    <h1>Welcome to my site!</h1>
-    
-    <!-- client:load tells Astro to activate JavaScript for this component -->
-    <InteractiveWidget client:load />
-  </body>
-</html>
+<Layout title="Home">
+  <h1>Hello World!</h1>
+  <InteractiveWidget client:load />
+</Layout>
+
