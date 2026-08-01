@@ -21,10 +21,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Explicitly set Node.js version to 22
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Install, build, and upload site
         uses: withastro/action@v3
-        with:
-          node-version: 22 # <-- ADD THIS LINE
 
   deploy:
     environment:
