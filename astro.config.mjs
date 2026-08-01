@@ -7,7 +7,10 @@ import react from '@astrojs/react';
 export default defineConfig({
     // 1. Replace with your actual GitHub username and repository name
     site: 'https://graphictin.github.io',
-    base: 'graphictin', // e.g., '/my-astro-site'
-    
+    base: process.env.NODE_ENV === 'production' ? '/graphictin' : '/',
+
+    // 2. Auto-open the site when running `astro dev`
+    server: { open: true },
+
     integrations: [react()],
   });
