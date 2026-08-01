@@ -1,17 +1,16 @@
 ---
-
+import InteractiveWidget from '../components/InteractiveWidget.jsx';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Astro + React Site</title>
+  </head>
+  <body>
+    <h1>Welcome to my site!</h1>
+    
+    <!-- client:load tells Astro to activate JavaScript for this component -->
+    <InteractiveWidget client:load />
+  </body>
 </html>
