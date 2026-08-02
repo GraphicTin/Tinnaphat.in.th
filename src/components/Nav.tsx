@@ -1,5 +1,6 @@
 import { useLang } from '../i18n/LangProvider';
 import LangToggle from './LangToggle';
+import ThemeToggle from './ThemeToggle';
 
 export default function Nav() {
   const { t } = useLang();
@@ -21,6 +22,7 @@ export default function Nav() {
           </a>
         ))}
       </div>
+      <ThemeToggle />
       <LangToggle />
     </nav>
   );

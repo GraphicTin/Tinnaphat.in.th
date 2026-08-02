@@ -1,15 +1,31 @@
 :root {
-  --bg: #0b0f17;
-  --bg-soft: #111725;
-  --panel: #151c2c;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #e7eaf3;
-  --muted: #9aa3b8;
-  --accent: #6366f1;
-  --accent-2: #a855f7;
-  --grad: linear-gradient(135deg, #6366f1, #a855f7);
+  --bg: #1a1b1e;
+  --bg-soft: #232429;
+  --panel: #26282e;
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #f2f2f0;
+  --muted: #9a9a94;
+  --accent: #e63946;
+  --accent-2: #2563eb;
+  --on-accent: #ffffff;
+  --nav-bg: rgba(26, 27, 30, 0.85);
   --radius: 14px;
   --maxw: 1080px;
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg: #f6f6f5;
+  --bg-soft: #ececea;
+  --panel: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --text: #1a1a1a;
+  --muted: #6b6b66;
+  --accent: #e63946;
+  --accent-2: #1d4ed8;
+  --on-accent: #ffffff;
+  --nav-bg: rgba(246, 246, 245, 0.8);
+  color-scheme: light;
 }
 
 * {
@@ -54,7 +70,7 @@ h3 {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 1rem 1.5rem;
-  background: rgba(11, 15, 23, 0.8);
+  background: var(--nav-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -103,8 +119,27 @@ h3 {
 }
 
 .lang-toggle button.active {
-  background: var(--grad);
-  color: #fff;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: border-color 0.15s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
 }
 
 .page {
@@ -128,10 +163,7 @@ h3 {
   font-weight: 800;
   letter-spacing: -0.03em;
   margin: 0;
-  background: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
 }
 
 .hero-role {
@@ -168,8 +200,8 @@ h3 {
 }
 
 .btn-primary {
-  background: var(--grad);
-  color: #fff;
+  background: var(--accent);
+  color: var(--on-accent);
   border: none;
 }
 
@@ -180,7 +212,7 @@ h3 {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.35);
 }
 
 section {
@@ -282,8 +314,9 @@ section > h2 {
   font-size: 0.78rem;
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
-  background: rgba(99, 102, 241, 0.15);
-  color: #b6b9ff;
+  border: 1px solid var(--accent-2);
+  background: transparent;
+  color: var(--accent-2);
   font-weight: 600;
 }
 
@@ -304,7 +337,7 @@ section > h2 {
 }
 
 .edu-item {
-  border-left: 2px solid var(--accent);
+  border-left: 3px solid var(--accent);
   padding: 0 0 1.25rem 1.25rem;
 }
 
@@ -344,7 +377,7 @@ section > h2 {
 .skill-fill {
   height: 100%;
   border-radius: 999px;
-  background: var(--grad);
+  background: var(--accent);
 }
 
 .contact-grid {

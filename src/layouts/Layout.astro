@@ -14,6 +14,13 @@ const { title, description = 'Portfolio of Tinnaphat Sirapunyasit — projects, 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <script is:inline>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        if (stored !== 'light' && stored !== 'dark') stored = 'dark';
+        document.documentElement.setAttribute('data-theme', stored);
+      })();
+    </script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
