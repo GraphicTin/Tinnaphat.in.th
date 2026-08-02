@@ -20,6 +20,8 @@
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@types/node": "^26.1.2"
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^26.1.2",
+    "typescript": "^6.0.3"
   }
 }
